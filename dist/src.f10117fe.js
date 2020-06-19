@@ -148,6 +148,18 @@ function () {
     this.events[eventName] = handlers;
   };
 
+  User.prototype.trigger = function (eventName) {
+    var handlers = this.events[eventName];
+
+    if (!handlers || handlers.length === 0) {
+      return;
+    }
+
+    handlers.forEach(function (callback) {
+      callback();
+    });
+  };
+
   return User;
 }();
 
@@ -165,8 +177,16 @@ var user = new User_1.User({
   name: 'Jonas',
   age: 17
 });
-user.on('click', function () {});
-console.log(user);
+user.on('click', function () {
+  console.log('click 1');
+});
+user.on('click', function () {
+  console.log('click 2');
+});
+user.on('save', function () {
+  console.log('saved by the bell');
+});
+user.trigger('click');
 },{"./models/User":"src/models/User.ts"}],"../../../.npm-global/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -195,7 +215,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64122" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65290" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
