@@ -130,6 +130,7 @@ var User =
 function () {
   function User(data) {
     this.data = data;
+    this.events = {};
   }
 
   User.prototype.get = function (propName) {
@@ -139,6 +140,12 @@ function () {
   User.prototype.set = function (update) {
     //whatever the second argument is, it gets copied&pasted onto the first argument
     Object.assign(this.data, update);
+  };
+
+  User.prototype.on = function (eventName, callback) {
+    var handlers = this.events[eventName] || [];
+    handlers.push(callback);
+    this.events[eventName] = handlers;
   };
 
   return User;
@@ -158,12 +165,8 @@ var user = new User_1.User({
   name: 'Jonas',
   age: 17
 });
-user.set({
-  name: 'Adam',
-  age: 83
-});
-console.log(user.get('name'));
-console.log(user.get('age'));
+user.on('click', function () {});
+console.log(user);
 },{"./models/User":"src/models/User.ts"}],"../../../.npm-global/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -192,7 +195,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63349" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64122" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
