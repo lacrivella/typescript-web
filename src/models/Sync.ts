@@ -4,9 +4,9 @@ import { UserProps } from './User';
 export class Sync {
   constructor(public rootURL: string) {}
 
-  fetch(): void {
+  fetch(id: number): void {
     axios
-      .get(`${this.rootURL}/${this.get('id')}`)
+      .get(`${this.rootURL}/${id}`)
       .then((response: AxiosResponse): void => {
         this.set(response.data);
       });
