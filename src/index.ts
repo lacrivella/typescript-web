@@ -1,9 +1,15 @@
 import { User } from './models/User';
 
-const user = new User({ name: 'Mikkel', age: 12 });
+const user = new User({ name: 'Regina', age: 16 });
 
-user.events.on('change', () => {
-  console.log('Time travel!');
-});
+// quick reminder on accessors
+class Person {
+  constructor(public firstName: string, public lastName: string) {}
 
-user.events.trigger('change');
+  get fullName(): string {
+    return `${this.firstName} ${this.lastName}`;
+  }
+}
+
+const person = new Person('Aleksander', 'Tiedemann');
+console.log(person.fullName);
