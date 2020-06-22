@@ -1970,12 +1970,14 @@ var Attributes =
 /** @class */
 function () {
   function Attributes(data) {
-    this.data = data;
-  }
+    var _this = this;
 
-  Attributes.prototype.get = function (key) {
-    return this.data[key];
-  };
+    this.data = data;
+
+    this.get = function (key) {
+      return _this.data[key];
+    };
+  }
 
   Attributes.prototype.set = function (update) {
     //whatever the second argument is, it gets copied&pasted onto the first argument
@@ -2078,7 +2080,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60144" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60260" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
