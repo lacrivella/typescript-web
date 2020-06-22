@@ -4,3 +4,8 @@ const user = new User({ name: 'Regina', age: 16 });
 
 console.log(user.get('name'));
 
+user.on('change', () => {
+  console.log('time travel');
+});
+
+user.trigger('change');
