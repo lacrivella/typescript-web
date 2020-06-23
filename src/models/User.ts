@@ -53,7 +53,7 @@ export class User {
     this.sync
       .save(this.attributes.getAll())
       .then((response: AxiosResponse): void => {
-        this.trigger('user was saved');
+        this.trigger('save');
       })
       .catch(() => {
         this.trigger('error');
