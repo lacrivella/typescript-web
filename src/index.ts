@@ -8,4 +8,4 @@ user.on('change', () => {
   console.log('time travel');
 });
 
-user.trigger('change');
+user.set({ name: 'Claudia' });
