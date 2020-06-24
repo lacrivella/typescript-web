@@ -1,6 +1,4 @@
-import { Eventing } from './Eventing';
-import { Sync } from './Sync';
-import { Attributes } from './Attributes';
+import { Model } from './Model';
 
 export interface UserProps {
   id?: number;
@@ -10,12 +8,6 @@ export interface UserProps {
 
 const rootURL = 'http://localhost:3000/users';
 
-export class User {
-  public events: Eventing = new Eventing();
-  public sync: Sync<UserProps> = new Sync<UserProps>(rootURL);
-  public attributes: Attributes<UserProps>;
-
-  constructor(attrs: UserProps) {
-    this.attributes = new Attributes<UserProps>(attrs);
-  }
+export class User extends Model<UserProps> {
+  //add a static class method to user that will give a prefig version of a user
 }
