@@ -1,4 +1,7 @@
 import { Model } from './Model';
+import { ApiSync } from './ApiSync';
+import { Attributes } from './Attributes';
+import { Eventing } from './Eventing';
 
 export interface UserProps {
   id?: number;
@@ -9,5 +12,11 @@ export interface UserProps {
 const rootURL = 'http://localhost:3000/users';
 
 export class User extends Model<UserProps> {
-  //add a static class method to user that will give a prefig version of a user
+  static buildUser(attrs: UserProps): User {
+    return new User(
+      new Attributes<UserProps>(attrs),
+      new Eventing(),
+      new ApiSync<UserProps>(rootURL)
+    );
+  }
 }
