@@ -178,6 +178,7 @@ function () {
   };
 
   UserForm.prototype.render = function () {
+    this.parent.innerHTML = '';
     var templateElement = document.createElement('template');
     templateElement.innerHTML = this.template();
     this.bindEvents(templateElement.content);
@@ -2298,7 +2299,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63003" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63077" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
