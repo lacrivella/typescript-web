@@ -134,12 +134,17 @@ function () {
 
   UserForm.prototype.eventsMap = function () {
     return {
-      'click:button': this.onButtonClick
+      'click:button': this.onButtonClick,
+      'mouseenter:h1': this.onHeaderHover
     };
   };
 
   UserForm.prototype.onButtonClick = function () {
     console.log('click');
+  };
+
+  UserForm.prototype.onHeaderHover = function () {
+    console.log('H1 was hovered');
   };
 
   UserForm.prototype.template = function () {
@@ -214,7 +219,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60849" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60995" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
