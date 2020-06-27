@@ -9,7 +9,7 @@ export abstract class View<T extends Model<K>, K> {
 
   abstract template(): string;
 
-  regionsMap(): { [key:string]: string } {
+  regionsMap(): { [key: string]: string } {
     return {};
   }
 
@@ -40,7 +40,11 @@ export abstract class View<T extends Model<K>, K> {
 
     for (let key in regionsMap) {
       const selector = regionsMap[key];
-      this.regions[key] = fragment.querySelector(selector);
+      const element = fragment.querySelector(selector);
+
+      if (element) {
+        this.regions[key] = element;
+      }
     }
   }
 
