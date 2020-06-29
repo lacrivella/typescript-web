@@ -17,4 +17,4 @@ Inspired by libraries like backbone.js and marionette, this app is an exploratio
 - navigate to cloned repo in your terminal
 - `npm i` to install all the dependencies
 - `json-server -w db.json` to start up the backend
-- `parcel index.html` to view the front end on localhost.
+- `parcel index.html` to view the frontend on localhost.
