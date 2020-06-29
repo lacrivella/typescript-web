@@ -11,5 +11,15 @@ export abstract class CollectionView<T, K> {
     this.parent.innerHTML = '';
 
     const templateElement = document.createElement('template');
+
+    for (let model of this.collection.models) {
+      const parentElement = document.createElement('div');
+      this.renderItem(model, parentElement);
+
+      //builds the list
+      templateElement.content.append(parentElement);
+    }
+
+    this.parent.append(templateElement.content);
   }
 }
