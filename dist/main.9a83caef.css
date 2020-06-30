@@ -1,0 +1,26 @@
+body {
+  background-color: #3b373d;
+  color: #3b373d;;
+}
+
+h1 {
+  color: #7ba99f;
+}
+
+#root, #collection {
+  background-color: rgba(244, 243, 234, .9);
+}
+/*small: for phones tablets*/
+@media only screen and (min-width: 600px) {
+}
+
+/*large:laptops/small desktops*/
+@media only screen and (min-width: 992px) {
+}
+
+/*extra large: large desktops and screens*/
+@media only screen and (min-width: 1200px) {
+}
+
+
+/*# sourceMappingURL=/main.9a83caef.css.map */
