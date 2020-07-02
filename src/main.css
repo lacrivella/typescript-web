@@ -1,14 +1,18 @@
 body {
   background-color: #3b373d;
-  color: #3b373d;;
+  color: #3b373d;
+  text-align: center;
 }
 
 h1 {
   color: #7ba99f;
 }
 
-#root, #collection {
-  background-color: rgba(244, 243, 234, .9);
+#root,
+#collection {
+  background-color: rgba(244, 243, 234, 0.9);
+  width: 30%;
+  margin-bottom: none;
 }
 /*small: for phones tablets*/
 @media only screen and (min-width: 600px) {
