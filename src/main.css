@@ -8,6 +8,8 @@ body {
   text-align: center;
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 0.85rem;
+  display: flex;
+  align-items: center;
 }
 
 h1 {
@@ -23,6 +25,13 @@ h1 {
   width: 30%;
   /* margin-bottom: 2px; */
   border-radius: 15px;
+  justify-content: baseline;
+}
+
+button {
+  /* display: block; */
+  /* float: right; */
+  border: none;
 }
 /*small: for phones tablets*/
 @media only screen and (min-width: 600px) {
