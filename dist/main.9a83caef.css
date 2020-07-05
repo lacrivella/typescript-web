@@ -9,9 +9,14 @@ body {
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 0.85rem;
   display: flex;
-  align-items: center;
 }
 
+#container {
+  margin: auto;
+  flex-direction: column;
+  align-content: center;
+  flex-direction: column;
+}
 h1 {
   /* color: #51918e; */
   color: #e7efe9;
@@ -25,7 +30,6 @@ h1 {
   width: 30%;
   /* margin-bottom: 2px; */
   border-radius: 15px;
-  justify-content: baseline;
 }
 
 button {
