@@ -23,14 +23,33 @@ h1 {
   /* color: #51918e; */
   color: #e7efe9;
   font-family: 'Roboto Condensed', sans-serif;
-  font-size: 1.8rem;
+  font-size: 1.8em;
+}
+
+div#root h1 {
+  font-size: 2.8em;
+  color: #C0B993;
+  margin-bottom: none;
 }
 
 button {
   border: none;
+  background-color: #2C383A;
+  color: #BDBB9F;
+  font-family: 'Noto Sans JP', sans-serif;
+  margin-right: 2em;
+}
+
+input {
+  color: #5E7F77;
+  margin: 5px;
+  text-align: center;
+  margin-right: 2em;
+  margin-left: 2em;
 }
 /*small: for phones tablets*/
 @media only screen and (min-width: 600px) {
+
 }
 
 /*large:laptops/small desktops*/
