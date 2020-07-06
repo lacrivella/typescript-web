@@ -12,11 +12,13 @@ body {
 }
 
 #container {
+  display: grid;
+  place-items: center;
   margin: auto;
-  flex-direction: column;
-  align-content: center;
-  flex-direction: column;
+  background-color: rgba(59, 55, 61, 0.7);
+  border-radius: 25px;
 }
+
 h1 {
   /* color: #51918e; */
   color: #e7efe9;
@@ -24,17 +26,7 @@ h1 {
   font-size: 1.8rem;
 }
 
-#root,
-#collection {
-  background-color: rgba(59, 55, 61, 0.7);
-  width: 30%;
-  /* margin-bottom: 2px; */
-  border-radius: 15px;
-}
-
 button {
-  /* display: block; */
-  /* float: right; */
   border: none;
 }
 /*small: for phones tablets*/
