@@ -34,10 +34,13 @@ div#root h1 {
 
 button {
   border: none;
+  border-radius: 5px;
+  box-shadow: 5px 2px 5px #5E7F77;
   background-color: #2C383A;
   color: #BDBB9F;
   font-family: 'Noto Sans JP', sans-serif;
   margin-right: 2em;
+  font-size: .95em;
 }
 
 input {
