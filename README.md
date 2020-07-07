@@ -21,4 +21,4 @@ Inspired by libraries like backbone.js and marionette, this app is an exploratio
 
 ---
 
-Background photo by [Helen Di](https://unsplash.com/@elenadi?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText).
+Background photo by [Helen Di](https://unsplash.com/@elenadi?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText) on [Unsplash](https://unsplash.com).
