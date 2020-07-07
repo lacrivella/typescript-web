@@ -18,3 +18,7 @@ Inspired by libraries like backbone.js and marionette, this app is an exploratio
 - `npm i` to install all the dependencies
 - `json-server -w db.json` to start up the backend
 - `parcel index.html` to view the frontend on localhost.
+
+---
+
+Background photo by [Helen Di](https://unsplash.com/@elenadi?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText).
