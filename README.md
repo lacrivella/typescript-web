@@ -2,6 +2,10 @@
 
 Inspired by libraries like backbone.js and marionette, this app is an exploration into TypeScript. A user is able to add a user and set a randomly generated age. The user is also able to save said user to a collection. The user is also able to view all the users in the collection.
 
+![Example image of the project when running on localhost](/assets/example.png "Project Image")
+
+---
+
 ## Tech Stack:
 
 - TypeScript
